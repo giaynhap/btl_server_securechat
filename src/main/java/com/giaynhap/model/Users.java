@@ -1,9 +1,9 @@
 package com.giaynhap.model;
 
 
-
 import javax.persistence.*;
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 @Entity
 public class Users {
@@ -19,7 +19,7 @@ public class Users {
     private  String password;
 
     @Column(name = "create_at")
-    private Date create_at;
+    private LocalDateTime create_at;
 
     @Column(name = "name")
     private  String name;
@@ -27,9 +27,15 @@ public class Users {
     @Column(name = "token")
     private  String token;
 
+    @Column(name = "token_time")
+    private  LocalDateTime tokenTime;
+
     @ManyToOne(optional=false)
     @JoinColumn(name = "uuid",referencedColumnName = "uuid", insertable=false, updatable=false)
     private UserInfo userInfo;
+
+    @Column(name = "enable")
+    private  boolean enable;
 
     public String getAccount() {
         return account;
@@ -47,11 +53,11 @@ public class Users {
         this.password = password;
     }
 
-    public Date getCreate_at() {
+    public LocalDateTime getCreate_at() {
         return create_at;
     }
 
-    public void setCreate_at(Date create_at) {
+    public void setCreate_at(LocalDateTime create_at) {
         this.create_at = create_at;
     }
 
@@ -87,5 +93,21 @@ public class Users {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public boolean isEnable() {
+        return enable;
+    }
+
+    public void setEnable(boolean enable) {
+        this.enable = enable;
+    }
+
+    public LocalDateTime getTokenTime() {
+        return tokenTime;
+    }
+
+    public void setTokenTime(LocalDateTime tokenTime) {
+        this.tokenTime = tokenTime;
     }
 }

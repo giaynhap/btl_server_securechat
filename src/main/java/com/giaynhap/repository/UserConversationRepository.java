@@ -13,5 +13,8 @@ import java.util.List;
 
 public interface UserConversationRepository extends CrudRepository<UserConversation, Long> {
 
+    @Query(nativeQuery = true,
+            value = "SELECT * FROM `user_conversation` where `user_uuid` = :uuid1 and `thread_uuid` = :uuid2")
+    UserConversation findByUuid(@Param("uuid1") String uuid,@Param("uuid2")String threadUuid);
 
 }

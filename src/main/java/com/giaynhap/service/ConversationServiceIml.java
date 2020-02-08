@@ -23,14 +23,19 @@ public class ConversationServiceIml  implements ConversationService{
     UserConversationRepository userConversationRepository;
     @Autowired
     MessageRepository messageRepository;
-
     @Autowired
     UserInfoRepository userInfoRepository;
+
 
     @Override
     public Page<Conversation> getPage(String userUuid, int page, int limit) {
         PageRequest pageRequest = PageRequest.of(page, limit, Sort.by("last_msg_at").descending());
-        return conversationRepository.findAll(userUuid,pageRequest);
+        Page<Conversation> pages =  conversationRepository.findAll(userUuid,pageRequest);
+       /* pages.map(conversation -> {
+            conversation.setUnread(conversationRepository.countUnread(conversation.getUser_uuid(),conversation.getUUID()));
+            return conversation;
+        });*/
+        return pages;
     }
 
     @Override

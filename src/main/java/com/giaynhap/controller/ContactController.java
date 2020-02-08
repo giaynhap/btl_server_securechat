@@ -4,6 +4,7 @@ import com.giaynhap.config.AppConstant;
 import com.giaynhap.handler.WebsocketCallHandler;
 import com.giaynhap.model.*;
 import com.giaynhap.model.DTO.ContactDTO;
+import com.giaynhap.model.DTO.UserInfoDTO;
 import com.giaynhap.service.ContactServiceIml;
 import org.aspectj.asm.IModelFilter;
 import org.modelmapper.ModelMapper;
@@ -17,6 +18,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 public class ContactController {
@@ -86,6 +89,20 @@ public class ContactController {
         Page<Contact> data = contactService.findByName(name, 0,20);
         Page<ContactDTO> resData = data.map(contact -> ContactDTO.fromEntity(modelMapper,contact)) ;
         return  ResponseEntity.ok(new ApiResponse(0,AppConstant.SUCCESS_MESSAGE,resData));
+    }
+
+    @RequestMapping(value = "/contact/online", method = RequestMethod.GET)
+    public ResponseEntity<?> getOnlineUsers() throws Exception {
+        UserDetails detail = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        try {
+            List<Contact> users = contactService.getAllContactUserInfo(detail.getUsername());
+
+            List<ContactDTO> dtos = users.stream().filter(m -> UserOnlineController.getInstance().isOnline(m.getContactUuid())).map(m->ContactDTO.fromEntity(modelMapper,m)).collect(Collectors.toList());
+            return ResponseEntity.ok(new ApiResponse<>(0,AppConstant.SUCCESS_MESSAGE, dtos));
+        }catch ( Exception e){
+            return ResponseEntity.ok(new ApiResponse<>(0,e.toString(), null));
+        }
+
     }
 
 

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.giaynhap.config.LocalDateTimeDeserializer;
 import com.giaynhap.config.LocalDateTimeSerializer;
+import com.giaynhap.controller.UserOnlineController;
 import com.giaynhap.model.Contact;
 import com.giaynhap.model.UserInfo;
 import com.giaynhap.model.Users;
@@ -32,7 +33,27 @@ public class UserInfoDTO implements Serializable {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime dob ;
 
+    @JsonProperty("online")
+    private  boolean online;
 
+    @JsonProperty( "phone")
+    private String phone ;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public boolean isOnline() {
+        return online;
+    }
+
+    public void setOnline(boolean online) {
+        this.online = online;
+    }
 
     public String getUUID() {
         return UUID;
@@ -80,6 +101,8 @@ public class UserInfoDTO implements Serializable {
             dto.publicKey = user.getUserKey().getPublicKey();
 
         }
+        dto.online = UserOnlineController.getInstance().isOnline(dto.UUID);
+
         return dto;
     }
     public UserInfo toEntity(ModelMapper modelMapper){

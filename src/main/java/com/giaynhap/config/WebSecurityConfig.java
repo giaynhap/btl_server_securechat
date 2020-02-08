@@ -55,6 +55,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/ws", "/ws/socket", "/topic/**", "/queue/**", "/ws/success", "/ws/**").permitAll()
                 .antMatchers("/keyprovider/public/{uuid}").permitAll()
                 .antMatchers("/users/prelogin/{device}/{username}").permitAll()
+                .antMatchers("/users/verifyRegister").permitAll()
+                .antMatchers("/users/add").permitAll()
+                .antMatchers("/file/image/{uuid}/{imguuid}").permitAll()
+                .antMatchers("/file/audio/{uuid}/{imguuid}").permitAll()
+                .antMatchers("/sticker/{sticker}/{index}").permitAll()
+                .antMatchers("/sticker/list").permitAll()
+                .antMatchers("/makepass/{password}").permitAll()
+                .antMatchers("/avatar_letter/{name}").permitAll()
+
+
                 // all other requests need to be authenticated
                 .anyRequest().authenticated().and().
 

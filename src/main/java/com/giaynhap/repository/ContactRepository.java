@@ -2,6 +2,7 @@ package com.giaynhap.repository;
 
 import com.giaynhap.model.Contact;
 import com.giaynhap.model.Conversation;
+import com.giaynhap.model.UserInfo;
 import com.giaynhap.model.Users;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,11 +10,18 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
+
 public interface ContactRepository extends CrudRepository<Contact, Long> {
     @Query(nativeQuery=true,
             value="select * from contact where user_uuid = :user_uuid",
             countQuery="SELECT count(*) FROM contact where user_uuid = :user_uuid")
     Page<Contact> findAll(@Param("user_uuid") String userUuid,Pageable page);
+
+
+    @Query(nativeQuery=true,
+            value="select * from contact  c   where c.user_uuid = :user_uuid" )
+    List<Contact> findAll(@Param("user_uuid") String userUuid);
 
     @Query(nativeQuery=true,
             value = "SELECT * FROM contact c WHERE c.user_uuid = :myuuid and c.contact_uuid = :uuid limit 1" )

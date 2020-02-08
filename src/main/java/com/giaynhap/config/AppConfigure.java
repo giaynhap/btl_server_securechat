@@ -17,13 +17,19 @@ public class AppConfigure {
         try {
             properties.load(this.getClass().getClassLoader().getResourceAsStream("application.properties"));
             if (SystemUtils.IS_OS_LINUX)
-                path = "/home/giaynhap/server.conf";
+                path = "/root/server.conf";
             else
                 path = "server.conf";
             config.load(new FileInputStream(path));
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public static String  getStikerConfigPath(){
+        if (instance == null)
+            instance = new AppConfigure();
+
+        return AppConfigure.instance.getConfig("sticker.config.file");
     }
 
     private String _getProperty(String key) {

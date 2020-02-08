@@ -25,14 +25,21 @@ public class KeyProvideController {
     @RequestMapping(value = "/keyprovider/public/{uuid}", method = RequestMethod.GET)
     public ResponseEntity<?> getPublicKey(@PathVariable("uuid") String uuid) throws Exception {
 
-        return ResponseEntity.ok( new ApiResponse<String>(0,AppConstant.SUCCESS_MESSAGE,userKeyService.getKey(uuid).getPublicKey() ) );
+        String key = userKeyService.getKey(uuid).getPublicKey();
+        if (key.trim().isEmpty()){
+            throw new Exception("key blank");
+        }
+        return ResponseEntity.ok( new ApiResponse<String>(0,AppConstant.SUCCESS_MESSAGE,key ) );
     }
 
     @RequestMapping(value = "/keyprovider/private", method = RequestMethod.GET)
     public ResponseEntity<?> getPrivateKey() throws Exception {
            UserDetails detail = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
-        return ResponseEntity.ok( new ApiResponse<String>(0,AppConstant.SUCCESS_MESSAGE,userKeyService.getKey(detail.getUsername()).getPrivateKey() ) );
+            String key = userKeyService.getKey(detail.getUsername()).getPrivateKey();
+            if (key.trim().isEmpty()){
+                throw new Exception("key blank");
+            }
+        return ResponseEntity.ok( new ApiResponse<String>(0,AppConstant.SUCCESS_MESSAGE,key) );
     }
 
     @RequestMapping(value = "/keyprovider/update", method = RequestMethod.POST)

@@ -77,6 +77,11 @@ public class UserInfo {
     }
 
     public void setPhone(String phone) {
+        if (phone == null)
+            return;
+        if (phone.startsWith("0")){
+            phone = "84"+ phone.substring(1,phone.length());
+        }
         this.phone = phone;
     }
 

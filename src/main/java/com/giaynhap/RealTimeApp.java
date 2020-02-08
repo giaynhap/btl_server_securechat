@@ -1,5 +1,6 @@
 package com.giaynhap;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.giaynhap.handler.WebsocketCallHandler;
 import com.giaynhap.handler.WebsocketChatHandler;
 import com.giaynhap.handler.WebsocketUtilsHandler;
@@ -58,7 +59,11 @@ public class RealTimeApp   {
 
     }
     */
+   @Bean
+   public BCrypt.Hasher bCryptPasswordEncoder() {
 
+       return BCrypt.withDefaults();
+   }
     @Bean
     public ModelMapper modelMapper() {
         ModelMapper mapper = new ModelMapper();

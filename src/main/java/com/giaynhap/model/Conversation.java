@@ -2,6 +2,8 @@ package com.giaynhap.model;
 
 
 
+import jdk.nashorn.internal.ir.annotations.Immutable;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.time.LocalDateTime;
@@ -35,15 +37,34 @@ public class Conversation {
             joinColumns = @JoinColumn(name = "thread_uuid"),
             inverseJoinColumns = @JoinColumn(name = "user_uuid")
     )
-
-
     private List<UserInfo> users;
+
+
+    private Integer unread;
+
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "thread_uuid",referencedColumnName = "uuid")
+    private List<UserConversation> userConversations;
+
 
     public List<UserInfo> getUsers() {
         if (users == null){
             return new ArrayList<UserInfo>();
         }
         return users;
+    }
+
+    public Integer getUnread() {
+        if (unread == null){
+            return 0;
+        }
+        return unread;
+    }
+
+    public void setUnread(Integer unread) {
+
+        this.unread = unread;
     }
 
     public void setUsers(List<UserInfo> users) {
@@ -90,5 +111,11 @@ public class Conversation {
         this.createAt = createAt;
     }
 
+    public List<UserConversation> getUserConversations() {
+        return userConversations;
+    }
 
+    public void setUserConversations(List<UserConversation> userConversations) {
+        this.userConversations = userConversations;
+    }
 }

@@ -48,8 +48,16 @@ public class MessageDTO implements Serializable {
     @JsonProperty("sender")
     private UserInfoDTO sender;
 
-    @JsonProperty("conversation")
-    private  ConversationDTO conversation;
+    @JsonProperty("thread_name")
+    private String threadName;
+
+    public String getThreadName() {
+        return threadName;
+    }
+
+    public void setThreadName(String threadName) {
+        this.threadName = threadName;
+    }
 
     public String getUuid() {
         return uuid;
@@ -131,13 +139,6 @@ public class MessageDTO implements Serializable {
         this.sender = sender;
     }
 
-    public ConversationDTO getConversation() {
-        return conversation;
-    }
-
-    public void setConversation(ConversationDTO conversation) {
-        this.conversation = conversation;
-    }
     public static MessageDTO fromEntity(ModelMapper modelMapper, Message message){
         MessageDTO dto = modelMapper.map(message, MessageDTO.class);
         if (message.getSenderInfo() != null)

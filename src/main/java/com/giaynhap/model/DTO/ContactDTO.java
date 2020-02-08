@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.giaynhap.config.LocalDateTimeDeserializer;
 import com.giaynhap.config.LocalDateTimeSerializer;
+import com.giaynhap.controller.UserOnlineController;
 import com.giaynhap.model.Contact;
 import org.modelmapper.ModelMapper;
 import org.springframework.ui.ModelMap;
@@ -32,6 +33,9 @@ public class ContactDTO implements Serializable {
 
     @JsonProperty("contact_name")
     private  String contactName;
+
+    @JsonProperty("online")
+    private  boolean online;
 
     public Long getId() {
         return id;
@@ -75,11 +79,16 @@ public class ContactDTO implements Serializable {
 
     public static ContactDTO fromEntity(ModelMapper modelMapper, Contact contact){
         ContactDTO dto = modelMapper.map(contact, ContactDTO.class);
+        dto.online = UserOnlineController.getInstance().isOnline(dto.contactUuid);
         return dto;
     }
     public Contact toEntity(ModelMapper modelMapper){
         Contact contact =  modelMapper.map(this, Contact.class);
         contact.setCustomName(this.getContactName());
         return contact;
+    }
+
+    public boolean isOnline() {
+        return online;
     }
 }

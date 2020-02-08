@@ -1,6 +1,7 @@
 package com.giaynhap.service;
 
 import com.giaynhap.model.Contact;
+import com.giaynhap.model.UserInfo;
 import com.giaynhap.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -62,6 +63,11 @@ public class ContactServiceIml  implements  ContactService{
         PageRequest pageRequest = PageRequest.of(page, limit, Sort.by("create_at").descending());
         return contactRepository
                 .findByName(name,pageRequest);
+    }
+
+    @Override
+    public List<Contact> getAllContactUserInfo(String uuid) {
+        return contactRepository.findAll(uuid);
     }
 
 

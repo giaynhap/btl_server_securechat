@@ -21,4 +21,8 @@ interface UserService{
     public List<UserInfo> findByName(String name);
 	public UserInfo findByUserName(String username);
 	public void save(Users user);
+    public Users addUser(Users u);
+    public List<UserInfo> getRandomSuggest(String uuid);
+    public UserInfo addUserInfo(UserInfo info);
+    
 }

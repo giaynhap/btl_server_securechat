@@ -54,14 +54,35 @@ public class UserServiceIml implements UserService {
         u.setName(name);
         userRepository.save(u);
     }
-	
+    @Override
+    public Users addUser(Users u) {
+
+        u.setUUID(UUID.randomUUID().toString());
+
+        return userRepository.save(u);
+    }
+
+    @Override
+    public List<UserInfo> getRandomSuggest(String uuid) {
+        return userInfoRepository.getRandomSuggest(uuid);
+    }
+
+    public UserInfo addUserInfo(UserInfo info){
+        return userInfoRepository.save(info);
+    }
+
 	@Override
 	public UserInfo findByUserName(String username){
-		Users user = userRepository.findByUserName(username);
-		if (user == null || user.getUserInfo() == null){
-			return null;
-		}
-		return user.getUserInfo();
+        try {
+            Users user = userRepository.findByUserName(username);
+            if (user == null || user.getUserInfo() == null) {
+                return null;
+            }
+            return user.getUserInfo();
+        }catch (Exception e){
+            return null;
+        }
+
 	}
 
     @Override

@@ -5,12 +5,13 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.giaynhap.config.LocalDateTimeDeserializer;
 import com.giaynhap.config.LocalDateTimeSerializer;
+import com.giaynhap.controller.UserOnlineController;
 import com.giaynhap.model.Contact;
 import com.giaynhap.model.Conversation;
 import com.giaynhap.model.UserInfo;
 import com.giaynhap.model.Users;
 import org.modelmapper.ModelMapper;
-
+import com.giaynhap.model.UserConversation;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
@@ -42,6 +43,19 @@ public class ConversationDTO implements Serializable {
     @JsonProperty( "users" )
     private List<UserInfoDTO> users;
 
+    @JsonProperty( "userConversations" )
+    private List<UserConversation> userConversations;
+
+    @JsonProperty( "un_read" )
+    private  Integer unread;
+
+    public Integer getUnread() {
+        return unread;
+    }
+
+    public void setUnread(Integer unread) {
+        this.unread = unread;
+    }
 
     public String getUUID() {
         return UUID;
@@ -97,7 +111,13 @@ public class ConversationDTO implements Serializable {
         return threadName;
     }
     public static ConversationDTO fromEntity(ModelMapper modelMapper, Conversation conversation){
-        ConversationDTO dto = modelMapper.map(conversation, ConversationDTO.class);
+        ConversationDTO dto = null;
+
+        try {
+            dto = modelMapper.map(conversation, ConversationDTO.class);
+        }catch ( Exception e){
+            e.printStackTrace();
+        }
 
         if (conversation.getUsers() != null) {
             dto.users = new ArrayList<UserInfoDTO>();
@@ -114,5 +134,19 @@ public class ConversationDTO implements Serializable {
         return conversation;
     }
 
+    public List<UserInfoDTO> getUsers() {
+        return users;
+    }
 
+    public void setUsers(List<UserInfoDTO> users) {
+        this.users = users;
+    }
+
+    public List<UserConversation> getUserConversations() {
+        return userConversations;
+    }
+
+    public void setUserConversations(List<UserConversation> userConversations) {
+        this.userConversations = userConversations;
+    }
 }

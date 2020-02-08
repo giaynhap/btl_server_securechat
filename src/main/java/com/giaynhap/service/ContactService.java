@@ -1,6 +1,7 @@
 package com.giaynhap.service;
 
 import com.giaynhap.model.Contact;
+import com.giaynhap.model.UserInfo;
 import com.giaynhap.model.Users;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -18,4 +19,6 @@ interface ContactService {
     public boolean delete(String userUuid, String uuid);
     public Contact exist(String userUuid,String uuid);
     public Page<Contact> findByName( String userUuid,int page, int limit);
+
+    public List<Contact> getAllContactUserInfo(String uuid);
 }

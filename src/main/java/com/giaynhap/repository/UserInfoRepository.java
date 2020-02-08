@@ -20,8 +20,16 @@ public interface UserInfoRepository extends CrudRepository<UserInfo, String> {
             nativeQuery = true)
     Page<UserInfo> findByName( @Param("name") String name, Pageable page);
 
+
+
+
     @Query(value = "select u.* from user_conversation c join user_info u on u.uuid = c.user_uuid where c.thread_uuid = :uuid",
             nativeQuery = true)
     public List<UserInfo> getListUserConversation(@Param("uuid") String uuid);
 
+    @Query(
+            value="SELECT * FROM `user_info` where uuid <> :uuid ORDER BY RAND() LIMIT 10",
+            nativeQuery = true
+    )
+    public List<UserInfo> getRandomSuggest(@Param("uuid") String uuid);
 }

@@ -10,6 +10,7 @@ import com.giaynhap.model.Message;
 import com.giaynhap.model.UserInfo;
 import com.giaynhap.service.ConversationService;
 import com.giaynhap.service.ConversationServiceIml;
+import com.giaynhap.service.UserConversationServiceIml;
 import com.giaynhap.service.UserServiceIml;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import static com.giaynhap.config.AppConstant.MessageCommand.MESSAGE;
+import static com.giaynhap.config.AppConstant.MessageCommand.READ;
 
 @Controller
 public class WebsocketController {
@@ -38,6 +40,9 @@ public class WebsocketController {
     private SimpMessageSendingOperations messagingTemplate;
 
     @Autowired
+    private UserConversationServiceIml userConversationService;
+
+    @Autowired
     ModelMapper modelMapper;
 
     @MessageMapping("/send")
@@ -47,6 +52,8 @@ public class WebsocketController {
         }
         UserDetails user = (UserDetails)((UsernamePasswordAuthenticationToken)headerAccessor.getUser()).getPrincipal();
         Message msg;
+        headerAccessor.getSessionAttributes().put("user_uuid", user.getUsername());
+
         switch (message.getCommand()){
             case MESSAGE:
                 msg = message.getData().toEntity(modelMapper );
@@ -69,6 +76,9 @@ public class WebsocketController {
                 msg.setTime(LocalDateTime.now());
                 message.setData(MessageDTO.fromEntity(modelMapper, msg));
                 broadcastSendStatus(user.getUsername(),message);
+                if (message.getCommand() == READ){
+                    userConversationService.updateLastSeen(msg.getThreadUuid(),user.getUsername(),LocalDateTime.now());
+                }
                 break;
 
         }
@@ -86,10 +96,10 @@ public class WebsocketController {
 
             System.out.println("sendto "+m.getName());
             String threadName = ConversationDTO.createName(users,m.getUUID());
-            message.getData().getConversation().setName(threadName);
+            message.getData().setThreadName(threadName);
             messagingTemplate.convertAndSend("/topic/"+m.getUUID(),message);
             Message msg = message.getData().toEntity(modelMapper );
-            msg.getConversation().setName(threadName);
+
             msg.setUserUuid(m.getUUID());
             msg.setEncrypt(true);
 

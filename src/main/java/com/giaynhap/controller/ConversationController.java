@@ -5,10 +5,10 @@ import com.giaynhap.model.*;
 import com.giaynhap.model.DTO.ContactDTO;
 import com.giaynhap.model.DTO.ConversationDTO;
 import com.giaynhap.model.DTO.MessageDTO;
-import com.giaynhap.service.ConversationServiceIml;
-import com.giaynhap.service.UserService;
-import com.giaynhap.service.UserServiceIml;
+import com.giaynhap.service.*;
 
+import com.giaynhap.sticker.StikerInfo;
+import com.giaynhap.sticker.StikerLoader;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -33,6 +33,9 @@ public class ConversationController {
     private ConversationServiceIml conversationService;
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private UserConversationServiceIml userConversationService;
 
     @RequestMapping(value = "/conversation/{uuid}", method = RequestMethod.GET)
     public ResponseEntity<?> getConversation(@PathVariable("uuid") String uuid){
@@ -158,11 +161,23 @@ public class ConversationController {
         return  ResponseEntity.ok(new ApiResponse(0,AppConstant.SUCCESS_MESSAGE,resData));
     }
 
+    @RequestMapping(value = "/conversation/udpatekey/{uuid}", method = RequestMethod.POST)
+    public ResponseEntity<?> updateKey(@PathVariable("uuid") String uuid,@RequestBody() List<UserConversation> users) throws Exception {
+        UserDetails detail = (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Conversation conversation = conversationService.get(uuid);
+        if (!conversation.getUser_uuid().equals(detail.getUsername())){
+            return  ResponseEntity.ok(new ApiResponse(1,AppConstant.SUCCESS_MESSAGE,null));
+        }
+        for (UserConversation uc : users)
+        {
+            userConversationService.updateKey(uuid,uc.getUserUuid(), uc.getKey());
+        }
+        return  ResponseEntity.ok(new ApiResponse(0,AppConstant.SUCCESS_MESSAGE,null));
+    }
+    @RequestMapping(value = "/sticker/list", method = RequestMethod.GET)
+    public ResponseEntity<?> getListStiker( ) throws Exception {
 
-
-
-
-
-
+        return  ResponseEntity.ok(new ApiResponse(0,AppConstant.SUCCESS_MESSAGE, StikerLoader.getInstance().getStickers() ));
+    }
 
 }

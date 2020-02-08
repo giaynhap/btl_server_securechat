@@ -16,14 +16,13 @@ import java.util.List;
 import java.util.Random;
 
 @Service
-public class OptService {
+public class OtpService {
     private static Random rnd = new Random();
 
-    public void sendOpt(String msisgn,String code)  throws Exception {
+    public void sendOtp(String msisgn, String code)  throws Exception {
 
-        System.out.println(" call send opt ");
         HttpPost post = new HttpPost("http://124.158.6.219/xosolive/gnapi.php");
-        String message = "Secure Chat Application \nYour opt Code"+code;
+        String message = "Secure Chat Application \nYour OTP code:  "+code;
         // add request parameter, form parameters
         List<NameValuePair> urlParameters = new ArrayList<>();
         urlParameters.add(new BasicNameValuePair("msisdn", msisgn));
@@ -33,14 +32,13 @@ public class OptService {
              CloseableHttpResponse response = httpClient.execute(post)) {
             HttpEntity entity = response.getEntity();
             String responseString = EntityUtils.toString(entity, "UTF-8");
-            System.out.println(responseString);
         }catch (Exception e){
-            System.out.println(e.toString());
         }
     }
     public String randomCode(){
-        StringBuilder sb = new StringBuilder(5);
-        for(int i=0; i < 5; i++)
+        int codeSize =7;
+        StringBuilder sb = new StringBuilder(codeSize);
+        for(int i=0; i < codeSize; i++)
             sb.append((char)('0' + rnd.nextInt(10)));
         return sb.toString();
     }

@@ -1,5 +1,6 @@
 package com.giaynhap.config;
 
+import com.giaynhap.controller.UserOnlineController;
 import com.giaynhap.service.JwtUserDetailsService;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     private JwtTokenUtil jwtTokenUtil;
     @Autowired
     private JwtUserDetailsService jwtUserDetailsService;
+    @Autowired
+    UserOnlineController onlineController;
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
@@ -101,6 +104,10 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
                     else
                         return message;
                 }
+               if (StompCommand.SUBSCRIBE.equals(accessor.getCommand())){
+                   onlineController.addUser(username);
+                   accessor.getSessionAttributes().put("user_uuid",username);
+               }
                 accessor.setLeaveMutable(true);
                 return MessageBuilder.createMessage(message.getPayload(), accessor.getMessageHeaders());
 
