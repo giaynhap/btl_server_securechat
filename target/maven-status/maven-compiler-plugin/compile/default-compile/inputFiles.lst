@@ -2,15 +2,19 @@ G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\Conversation.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\config\WebSecurityConfig.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\handler\WebsocketChatHandler.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\service\UserKeyServiceIml.java
+G:\RealTimeChatAPI\src\main\java\com\giaynhap\controller\UserOnlineController.java
+G:\RealTimeChatAPI\src\main\java\com\giaynhap\sticker\StikerInfo.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\handler\ApiExceptionHandler.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\UserInfo.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\ApiResponse.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\Device.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\Message.java
+G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\UserRegistRequest.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\repository\DeviceRepository.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\repository\ConversationRepository.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\service\ConversationServiceIml.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\manager\ThreadManager.java
+G:\RealTimeChatAPI\src\main\java\com\giaynhap\sticker\StikerLoader.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\manager\UserManager.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\service\DeviceService.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\service\ImageService.java
@@ -22,6 +26,8 @@ G:\RealTimeChatAPI\src\main\java\com\giaynhap\repository\UserInfoRepository.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\config\JwtRequestFilter.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\objects\ThreadCall.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\DTO\UserInfoDTO.java
+G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\VerifyRegister.java
+G:\RealTimeChatAPI\src\main\java\com\giaynhap\service\UserConversationService.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\handler\WebsocketUtilsHandler.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\service\UserKeyService.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\JwtRequest.java
@@ -34,6 +40,7 @@ G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\ContactSerializable.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\service\ContactServiceIml.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\RealTimeApp.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\service\ContactService.java
+G:\RealTimeChatAPI\src\main\java\com\giaynhap\service\UserConversationServiceIml.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\service\DeviceServiceIml.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\model\DTO\MessageDTO.java
 G:\RealTimeChatAPI\src\main\java\com\giaynhap\repository\UserConversationRepository.java
