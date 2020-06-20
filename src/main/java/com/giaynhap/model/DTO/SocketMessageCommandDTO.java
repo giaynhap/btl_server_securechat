@@ -6,6 +6,7 @@ import com.giaynhap.config.AppConstant;
 public class SocketMessageCommandDTO {
     @JsonProperty("command")
     private AppConstant.MessageCommand command;
+    @JsonProperty("data")
     private MessageDTO data;
 
     public AppConstant.MessageCommand getCommand() {

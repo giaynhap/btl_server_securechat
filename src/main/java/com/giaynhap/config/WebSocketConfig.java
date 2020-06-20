@@ -45,8 +45,15 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        registry.setApplicationDestinationPrefixes("/queue");
-        registry.enableSimpleBroker("/topic");
+      //  registry.setApplicationDestinationPrefixes("/queue");
+        registry.enableSimpleBroker("/topic","/qr-login");
+      //  registry.enableSimpleBroker("/qr-login");
+    }
+    public Boolean isPublicTopic(String destination){
+        if (destination.startsWith("/qr-login")){
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -54,9 +61,12 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         registration.setInterceptors(new ChannelInterceptorAdapter() {
             public Message<?> preSend(Message<?> message, MessageChannel channel) {
                 StompHeaderAccessor accessor = StompHeaderAccessor.wrap(message);
+
+
                 if (accessor.getCommand()== null){
                     return message;
                 }
+
 
                 List<String> tokenList = accessor.getNativeHeader("X-Authorization");
                 accessor.removeNativeHeader("X-Authorization");
@@ -88,8 +98,10 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
                     System.out.println("WEBSOCKET "+e.toString()+ " "+ accessor.getCommand());
                     username = null;
                 }
+                String destination = accessor.getDestination();
+                System.out.println("["+accessor.getCommand()+"]"+accessor.getDestination());
 
-               if (username != null) {
+                if (username != null) {
                     UserDetails userDetails = jwtUserDetailsService.loadUserByUsername(username);
                     if (jwtTokenUtil.validateToken(jwtToken, userDetails)) {
                         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
@@ -99,15 +111,20 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
                 }
                else
                 {
-                    if (StompCommand.SUBSCRIBE.equals(accessor.getCommand()))
+
+                    if ( destination != null && !isPublicTopic(destination ) && StompCommand.SUBSCRIBE.equals(accessor.getCommand()))
                           throw new IllegalArgumentException("No permission for this topic");
-                    else
-                        return message;
-                }
-               if (StompCommand.SUBSCRIBE.equals(accessor.getCommand())){
-                   onlineController.addUser(username);
-                   accessor.getSessionAttributes().put("user_uuid",username);
+                    else {
+                        accessor.setLeaveMutable(true);
+                        return MessageBuilder.createMessage(message.getPayload(), accessor.getMessageHeaders());
+                    }
                }
+               if ( destination != null  && username != null ) {
+                    if (StompCommand.SUBSCRIBE.equals(accessor.getCommand())) {
+                        onlineController.addUser(username);
+                        accessor.getSessionAttributes().put("user_uuid", username);
+                    }
+                }
                 accessor.setLeaveMutable(true);
                 return MessageBuilder.createMessage(message.getPayload(), accessor.getMessageHeaders());
 

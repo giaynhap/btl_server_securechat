@@ -17,4 +17,13 @@ public class AppConstant {
             this.value = value;
         }
     }
+    public enum SocketLoginCommand{
+        PREHANDSHAKE(0),
+        HANDSHAKE(1),
+        TRANSFERDATA(2);
+        private final int value;
+        private SocketLoginCommand(int value) {
+            this.value = value;
+        }
+    }
 }

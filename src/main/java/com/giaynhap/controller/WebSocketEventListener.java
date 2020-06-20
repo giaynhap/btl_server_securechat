@@ -31,8 +31,11 @@ public class WebSocketEventListener {
     @EventListener
     public void handleWebSocketDisconnectListener(SessionDisconnectEvent event) {
         StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(event.getMessage());
-        String uuid = (String) headerAccessor.getSessionAttributes().get("user_uuid");
-        onlineController.removeUser(uuid);
+        try {
+            String uuid = (String) headerAccessor.getSessionAttributes().get("user_uuid");
+            onlineController.removeUser(uuid);
+        }catch (Exception e){
 
+        }
     }
 }

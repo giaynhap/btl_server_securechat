@@ -1,49 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="06c25ed8-a2f5-4c3a-a4a2-4901f9d7891e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/btl_server_securechat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/model/DTO/SocketLoginDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.conf" beforeDir="false" afterPath="$PROJECT_DIR$/server.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/RealTimeChatAPI.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/config/AppConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/config/AppConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/config/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/WebSocketEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/WebSocketEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/WebsocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/WebsocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/model/DTO/SocketMessageCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/model/DTO/SocketMessageCommandDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/RealTimeApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/RealTimeApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/config/AppConfigure.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/config/AppConfigure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/config/WebSecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/config/WebSocketConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/config/WebSocketConfig$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/config/WebSocketConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/config/WebSocketConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/ContactController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/ConversationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/ConversationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/FileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/KeyProvideController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/KeyProvideController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebSocketEventListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebSocketEventListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebsocketController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebsocketController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebsocketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebsocketController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/Conversation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/Conversation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/ContactDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/ContactDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/ConversationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/ConversationDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/MessageDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/MessageDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/UserInfoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/UserInfoDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/UserConversation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/UserConversation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/repository/ContactRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/repository/ContactRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/repository/ConversationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/repository/ConversationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/repository/UserConversationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/repository/UserConversationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/repository/UserInfoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/repository/UserInfoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/ContactService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/ContactService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/ContactServiceIml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/ContactServiceIml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/ConversationServiceIml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/ConversationServiceIml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/ImageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/OptService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/UserServiceIml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/UserServiceIml.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/avatar.000-000-0001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/user_dir/avatar.000-000-0001.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_dir/stiker.ini" beforeDir="false" afterPath="$PROJECT_DIR$/user_dir/stiker.ini" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,49 +73,101 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1Tj1ZmD1vV3yekCoDFd30qZFAX8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.RealTimeApp">
+    <configuration name="RealTimeChatAPI []" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="#USE_PROJECT_JDK" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="-Ddebug" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="RealTimeApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="RealTimeChatAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.giaynhap.RealTimeApp" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Maven.RealTimeChatAPI []" />
+      <item itemvalue="Spring Boot.RealTimeApp" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -160,24 +211,63 @@
       <workItem from="1579057339368" duration="4000" />
       <workItem from="1581938573331" duration="7094000" />
       <workItem from="1586494130656" duration="56000" />
+      <workItem from="1592544513140" duration="2027000" />
+      <workItem from="1592627806206" duration="12484000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="307" y="16" key="#Project_Structure" timestamp="1592540492038">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="307" y="16" key="#Project_Structure/0.0.1600.900@0.0.1600.900" timestamp="1592540492038" />
+    <state x="458" y="41" width="683" height="859" key="#RealTimeApp" timestamp="1592647797999">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="458" y="41" width="683" height="859" key="#RealTimeApp/0.0.1600.900@0.0.1600.900" timestamp="1592647797999" />
+    <state x="281" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592545629415">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="281" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.900@0.0.1600.900" timestamp="1592545629415" />
+    <state x="605" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1592630727838">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="605" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1592630727838" />
+    <state width="1557" height="316" key="GridCell.Tab.0.bottom" timestamp="1592648329081">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1557" height="316" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1592648329081" />
+    <state width="1557" height="316" key="GridCell.Tab.0.center" timestamp="1592648329081">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1557" height="316" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1592648329081" />
+    <state width="1557" height="316" key="GridCell.Tab.0.left" timestamp="1592648329080">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1557" height="316" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1592648329080" />
+    <state width="1557" height="316" key="GridCell.Tab.0.right" timestamp="1592648329081">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="1557" height="316" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1592648329081" />
+    <state x="328" y="87" key="SettingsEditor" timestamp="1592541718596">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="328" y="87" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1592541718596" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

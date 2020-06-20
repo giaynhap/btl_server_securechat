@@ -2,10 +2,7 @@ package com.giaynhap.controller;
 
 import com.giaynhap.config.AppConstant;
 import com.giaynhap.model.Conversation;
-import com.giaynhap.model.DTO.ConversationDTO;
-import com.giaynhap.model.DTO.MessageDTO;
-import com.giaynhap.model.DTO.SocketMessageCommandDTO;
-import com.giaynhap.model.DTO.UserInfoDTO;
+import com.giaynhap.model.DTO.*;
 import com.giaynhap.model.Message;
 import com.giaynhap.model.UserInfo;
 import com.giaynhap.service.ConversationService;
