@@ -19,7 +19,7 @@ public class Device {
     @Column(name = "device_code")
     private String deviceCode;
     @JsonProperty( "device_os" )
-    @Column(name = "device_os")
+        @Column(name = "device_os")
     private String deviceOs;
 
     public String getUUID() {

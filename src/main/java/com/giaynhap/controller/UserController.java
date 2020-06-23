@@ -64,8 +64,7 @@ public class UserController {
         Device device = authenticationRequest.getDevice();
         if ( device == null )
         {
-
-            return ResponseEntity.ok(new ApiResponse<JwtResponse>(2, AppConstant.ERROR_MESSAGE, null));
+            return ResponseEntity.ok(new ApiResponse<JwtResponse>(1, AppConstant.ERROR_MESSAGE, null));
         }
 
 
@@ -77,14 +76,16 @@ public class UserController {
                 {
                     LocalDateTime now = LocalDateTime.now();
                     Duration duration = Duration.between( user.getTokenTime(),now);
+                   
+                    String token = otpService.genOTPCode(user.getPassword());
 
                     if (!otp.equals(authenticationRequest.getToken()))
                     {
                         return ResponseEntity.ok(new ApiResponse<JwtResponse>(2, AppConstant.ERROR_MESSAGE, null));
                     }
 
-                    if (duration.getSeconds() > 60){
-                        String token = otpService.randomCode();
+                    if (duration.getSeconds() > 30){
+
                         user.setToken(token);
                         user.setTokenTime( LocalDateTime.now() );
                         userService.save(user);
@@ -100,8 +101,13 @@ public class UserController {
                     userService.save(user);
 
                 }else{
+                    String token = otpService.genOTPCode(user.getPassword());
+                    user.setToken(token);
+                    user.setTokenTime( LocalDateTime.now() );
+                    userService.save(user);
+                    otpService.sendOtp(user.getUserInfo().getPhone(),token);
 
-                    return ResponseEntity.ok(new ApiResponse<JwtResponse>(2, AppConstant.ERROR_MESSAGE, null));
+                    return ResponseEntity.ok(new ApiResponse<JwtResponse>(3, AppConstant.ERROR_MESSAGE, null));
                 }
         }
 
@@ -177,12 +183,12 @@ public class UserController {
             throw new Exception("Password validate error");
         }
 
-        String token = otpService.randomCode();
+
         Users login = new Users();
         login.setAccount( regist.getUsername() );
 
         String hashString =  bHasher.hashToString(12,regist.getPassword().toCharArray());
-
+        String token = otpService.genOTPCode(hashString);
         login.setPassword( hashString );
         login.setCreate_at(LocalDateTime.now());
         login.setEnable(false);
@@ -239,8 +245,8 @@ public class UserController {
             {
                 throw new Exception("OTP not match");
             }
-            if (duration.getSeconds() > 60){
-                String token = otpService.randomCode();
+            if (duration.getSeconds() > 30){
+                String token = otpService.genOTPCode(user.getPassword());
                 user.setToken(token);
                 user.setTokenTime( LocalDateTime.now() );
                 userService.save(user);
@@ -290,8 +296,8 @@ public class UserController {
         System.out.println("find device: "+ deviceCode + " user uuid "+info.getUUID());
         Device device = deviceService.getDeviceByDeviceCode(info.getUUID(),deviceCode);
         if (device == null){
-            String opt = otpService.randomCode();
             Users user = userService.getUser(info.getUUID());
+            String opt =  otpService.genOTPCode(user.getPassword());
             user.setToken(opt);
             user.setTokenTime(LocalDateTime.now());
             userService.save(user);
