@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,44 +24,16 @@
   <component name="ChangeListManager">
     <list default="true" id="06c25ed8-a2f5-4c3a-a4a2-4901f9d7891e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.conf" beforeDir="false" afterPath="$PROJECT_DIR$/server.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ConversationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ConversationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/model/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/model/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/OtpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/OtpService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RealTimeChatAPI-6.11.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RealTimeChatAPI-6.11.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RealTimeChatAPI-6.11.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/RealTimeChatAPI-6.11.0.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.2def44dc-3366-45d2-8f71-e7908d42f8af.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.32347c83-f17c-45af-9d07-f44bd2c491c5.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.507c284b-d296-435b-8d6a-e96f5f8413e1.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.52813290-d5a1-42fc-a9e1-29511c42fa9b.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.821fa292-44c9-4fdc-b730-0224c1e38e7f.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.874b48b2-d1ee-41a7-a2a1-7c8d02a95aa7.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.9fed6b9e-c6fe-445c-bd42-13eb3421a78b.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.bbda35ff-75d1-4e0d-b45c-3d1f199c85cb.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.c403ea9a-bb21-4a20-8a29-10baca7d9a49.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.db18c438-4c76-4ea5-899f-9f814dcd7475.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.eefb46ab-f120-4ce1-b6a6-ecf24e1f8718.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.f26ee1c9-2958-48f1-9436-10a6b21e3e56.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.f5f1b6d8-a1df-46db-9f36-e48e0381f171.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/audio.fc773704-81ea-4ac0-974f-cb523648f3b7.aac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.344a8a82-4c56-4c75-82ed-70c30189a2c9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.46607fbf-1bb8-4bfe-93aa-bbdf79dbca87.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.4a4a536a-aa27-4186-aecf-d161b04b8e36.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.506b2b60-fbb3-4a7c-be43-6a7675de6bd8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.510deedc-2fad-4cc4-9476-a83fab376cf3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.758074a6-9de6-4c45-b96e-11557fe085bd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.76331439-34aa-432b-b12e-84bd5a075f82.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.88d25c3a-9c39-407e-92b6-378ca6b166ec.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.990c669c-1e0a-4fe1-a04d-6553a8678dbd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.a4999555-7411-4d35-b7ef-e67866ca4492.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.f768cb7c-34f7-4645-8134-3c8a6c4cdb00.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/000-000-0001/image.f89bfd3b-c8e6-4865-a656-e16b5d388120.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_dir/stiker.ini" beforeDir="false" afterPath="$PROJECT_DIR$/user_dir/stiker.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/model/Conversation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/model/Conversation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationServiceIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationServiceIml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/DeviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/DeviceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/UserConversationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/UserConversationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/UserConversationServiceIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/UserConversationServiceIml.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,6 +64,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1Tj1ZmD1vV3yekCoDFd30qZFAX8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -105,23 +87,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.RealTimeApp">
     <configuration name="RealTimeChatAPI []" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
@@ -197,6 +173,7 @@
       <item itemvalue="Spring Boot.RealTimeApp" />
     </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -242,24 +219,30 @@
       <workItem from="1592544513140" duration="2027000" />
       <workItem from="1592627806206" duration="12484000" />
       <workItem from="1592824845732" duration="1600000" />
+      <workItem from="1598952777434" duration="3160000" />
+      <workItem from="1599104352485" duration="2869000" />
+      <workItem from="1599111948038" duration="2657000" />
+      <workItem from="1599200890541" duration="2073000" />
+      <workItem from="1599277749215" duration="2438000" />
+      <workItem from="1599289411940" duration="9681000" />
+      <workItem from="1599545236039" duration="3566000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="307" y="16" key="#Project_Structure" timestamp="1592540492038">
@@ -278,22 +261,46 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="605" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1592630727838" />
-    <state width="1557" height="316" key="GridCell.Tab.0.bottom" timestamp="1592648329081">
-      <screen x="0" y="0" width="1600" height="900" />
+    <state x="466" y="258" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599278205116">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="466" y="258" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1599278205116" />
+    <state width="1323" height="35" key="GridCell.Tab.0.bottom" timestamp="1599552500043">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="35" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599552500043" />
     <state width="1557" height="316" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1592648329081" />
-    <state width="1557" height="316" key="GridCell.Tab.0.center" timestamp="1592648329081">
-      <screen x="0" y="0" width="1600" height="900" />
+    <state width="1323" height="35" key="GridCell.Tab.0.center" timestamp="1599552500043">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="35" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599552500043" />
     <state width="1557" height="316" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1592648329081" />
-    <state width="1557" height="316" key="GridCell.Tab.0.left" timestamp="1592648329080">
-      <screen x="0" y="0" width="1600" height="900" />
+    <state width="1323" height="35" key="GridCell.Tab.0.left" timestamp="1599552500043">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="35" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599552500043" />
     <state width="1557" height="316" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1592648329080" />
-    <state width="1557" height="316" key="GridCell.Tab.0.right" timestamp="1592648329081">
-      <screen x="0" y="0" width="1600" height="900" />
+    <state width="1323" height="35" key="GridCell.Tab.0.right" timestamp="1599552500043">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="35" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599552500043" />
     <state width="1557" height="316" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1592648329081" />
+    <state width="1323" height="12" key="GridCell.Tab.1.bottom" timestamp="1599303382633">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="12" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599303382633" />
+    <state width="1323" height="12" key="GridCell.Tab.1.center" timestamp="1599303382632">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="12" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1599303382632" />
+    <state width="1323" height="12" key="GridCell.Tab.1.left" timestamp="1599303382632">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="12" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1599303382632" />
+    <state width="1323" height="12" key="GridCell.Tab.1.right" timestamp="1599303382632">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="12" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1599303382632" />
     <state x="328" y="87" key="SettingsEditor" timestamp="1592541718596">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
@@ -319,57 +326,57 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ConversationController.java</url>
-          <line>76</line>
+          <line>77</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ConversationController.java</url>
-          <line>73</line>
+          <line>74</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ConversationController.java</url>
-          <line>70</line>
+          <line>71</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationServiceIml.java</url>
-          <line>50</line>
+          <line>49</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationServiceIml.java</url>
-          <line>53</line>
+          <line>52</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationServiceIml.java</url>
-          <line>66</line>
+          <line>76</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>196</line>
+          <line>197</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>206</line>
+          <line>207</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>202</line>
+          <line>203</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>204</line>
+          <line>205</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>263</line>
+          <line>264</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -384,17 +391,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ConversationController.java</url>
-          <line>59</line>
+          <line>60</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ConversationController.java</url>
-          <line>56</line>
+          <line>57</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ConversationController.java</url>
-          <line>55</line>
+          <line>56</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -455,52 +462,47 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>86</line>
+          <line>87</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>238</line>
+          <line>239</line>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>227</line>
+          <line>228</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>233</line>
+          <line>234</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>245</line>
+          <line>246</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>253</line>
+          <line>254</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>234</line>
+          <line>235</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>189</line>
+          <line>190</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>171</line>
+          <line>172</line>
           <properties class="com.giaynhap.controller.UserController" method="addUser">
             <option name="EMULATED" value="true" />
           </properties>

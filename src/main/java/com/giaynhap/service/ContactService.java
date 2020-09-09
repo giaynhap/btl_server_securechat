@@ -19,6 +19,5 @@ interface ContactService {
     public boolean delete(String userUuid, String uuid);
     public Contact exist(String userUuid,String uuid);
     public Page<Contact> findByName( String userUuid,int page, int limit);
-
     public List<Contact> getAllContactUserInfo(String uuid);
 }

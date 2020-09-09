@@ -32,7 +32,7 @@ public class Conversation {
 
     @ManyToMany(cascade = {
             CascadeType.MERGE
-    })
+    } )
     @JoinTable(name = "user_conversation",
             joinColumns = @JoinColumn(name = "thread_uuid"),
             inverseJoinColumns = @JoinColumn(name = "user_uuid")

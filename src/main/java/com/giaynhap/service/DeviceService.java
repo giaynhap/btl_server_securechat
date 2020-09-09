@@ -11,4 +11,5 @@ public interface DeviceService {
     public List<Device> getUserDevices(String uuid);
     public Device addDevice(Device device);
     public void removeDevice(Device device);
+
 }

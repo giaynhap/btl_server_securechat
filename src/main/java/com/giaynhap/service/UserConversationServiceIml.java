@@ -19,6 +19,7 @@ public class UserConversationServiceIml implements UserConversationService {
         userConversationRepository.save(userConversation);
     }
 
+
     @Override
     public void updateLastSeen(String conversationUuid, String userUuid, LocalDateTime time) {
         UserConversation userConversation = userConversationRepository.findByUuid(userUuid,conversationUuid);

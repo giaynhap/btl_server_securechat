@@ -26,7 +26,6 @@ public class ConversationServiceIml  implements ConversationService{
     @Autowired
     UserInfoRepository userInfoRepository;
 
-
     @Override
     public Page<Conversation> getPage(String userUuid, int page, int limit) {
         PageRequest pageRequest = PageRequest.of(page, limit, Sort.by("last_msg_at").descending());
@@ -52,6 +51,17 @@ public class ConversationServiceIml  implements ConversationService{
 
 
         return conversation;
+    }
+    @Override
+    public  void addUser(String conversationUuid,String userUuid, String key)
+    {
+        UserConversation userConversation =  new UserConversation();
+        userConversation.setThreadUuid(conversationUuid);
+        userConversation.setUserUuid(userUuid);
+        userConversation.setKey(key);
+        userConversationRepository.save(userConversation);
+        //   userConversationRepository.saveAll()
+
     }
 
     @Override

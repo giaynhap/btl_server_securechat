@@ -19,4 +19,5 @@ interface ConversationService {
     public Conversation getUserConversation(String uuid1,String uuid2);
     public List<UserInfo> getListUser(String uuid);
     public Message addMessage(Message mesage);
+    public void addUser(String conversationUuid,String userUuid, String key);
 }

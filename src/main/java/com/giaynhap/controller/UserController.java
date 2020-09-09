@@ -62,15 +62,16 @@ public class UserController {
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
         Device device = authenticationRequest.getDevice();
-        if ( device == null )
+        // test no opt
+        if ( false && device == null )
         {
             return ResponseEntity.ok(new ApiResponse<JwtResponse>(1, AppConstant.ERROR_MESSAGE, null));
         }
 
 
         final Users user = authenticate(authenticationRequest.getUsername(),authenticationRequest.getPassword());
-
-        if (deviceService.getDeviceByDeviceCode(user.getUUID(),device.getDeviceCode()) == null ){
+        // test no opt
+        if ( false &&   deviceService.getDeviceByDeviceCode(user.getUUID(),device.getDeviceCode()) == null ){
                 String otp = user.getToken();
                 if ( otp != null && !otp.trim().isEmpty())
                 {
@@ -209,7 +210,7 @@ public class UserController {
         userKey.setPrivateKey("");
         userKey.setUUID(login.getUUID());
         userKeyService.save(userKey);
-        otpService.sendOtp(userInfo.getPhone(),token);
+       // test no opt otpService.sendOtp(userInfo.getPhone(),token);
         try {
             BufferedImage img = imageService.avatarLetterImage(userInfo.getName());
             String avatarPath = AppConfigure.getConfig("user.avatar.path");

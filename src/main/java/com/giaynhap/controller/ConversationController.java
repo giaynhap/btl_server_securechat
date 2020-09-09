@@ -5,6 +5,7 @@ import com.giaynhap.model.*;
 import com.giaynhap.model.DTO.ContactDTO;
 import com.giaynhap.model.DTO.ConversationDTO;
 import com.giaynhap.model.DTO.MessageDTO;
+import com.giaynhap.model.DTO.UserKeyDTO;
 import com.giaynhap.service.*;
 
 import com.giaynhap.sticker.StikerInfo;
@@ -97,7 +98,21 @@ public class ConversationController {
         conversation = conversationService.add(conversation);
         conversation.setName(ConversationDTO.createName(conversation.getUsers(),detail.getUsername()));
 
+
         return ResponseEntity.ok(new ApiResponse<ConversationDTO>(0, AppConstant.SUCCESS_MESSAGE, ConversationDTO.fromEntity(modelMapper,conversation)));
+    }
+    @RequestMapping(value = "/conversation/addUser/{conversation}", method = RequestMethod.POST)
+    public  ResponseEntity<?> getConversation(@RequestBody List<UserConversation> users, @PathVariable("conversation") String conversationUUID) throws Exception{
+        UserDetails detail = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+
+        for (UserConversation u : users){
+            conversationService.addUser(conversationUUID, u.getUserUuid(),u.getKey());
+        }
+//        conversation.setUsers();
+
+
+        return ResponseEntity.ok(new ApiResponse<Object>(0, AppConstant.SUCCESS_MESSAGE,  null));
     }
 
     @RequestMapping(value = "/conversation/new/{uuid}", method = RequestMethod.POST)
