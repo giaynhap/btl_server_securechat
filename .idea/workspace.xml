@@ -22,17 +22,54 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06c25ed8-a2f5-4c3a-a4a2-4901f9d7891e" name="Default Changelist" comment="">
+    <list default="true" id="06c25ed8-a2f5-4c3a-a4a2-4901f9d7891e" name="Default Changelist" comment="integrate Phuc's swear filter">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/config/Startup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/FilterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/SocketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ConversationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ConversationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.conf" beforeDir="false" afterPath="$PROJECT_DIR$/server.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/RealTimeApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/RealTimeApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/config/AppConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/config/AppConfigure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/model/Conversation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/model/Conversation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationServiceIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/ConversationServiceIml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/DeviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/DeviceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/UserConversationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/UserConversationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/UserConversationServiceIml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/service/UserConversationServiceIml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/WebsocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/giaynhap/controller/WebsocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/RealTimeApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/RealTimeApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/config/AppConfigure.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/config/AppConfigure.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/config/JodaDateTimeConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/config/JodaDateTimeConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/config/JwtRequestFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/config/JwtRequestFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/config/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/config/JwtTokenUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/config/LocalDateTimeDeserializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/config/LocalDateTimeDeserializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/config/WebSocketConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/config/WebSocketConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/ContactController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/ConversationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/ConversationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/FileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/KeyProvideController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/KeyProvideController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/UserOnlineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/UserOnlineController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebSocketEventListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebSocketEventListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebsocketController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebsocketController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebsocketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/controller/WebsocketController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/handler/WebsocketCallHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/handler/WebsocketCallHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/manager/ThreadManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/manager/ThreadManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/manager/UserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/manager/UserManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/ConversationDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/ConversationDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/MessageDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/MessageDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/UserInfoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/model/DTO/UserInfoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/objects/ThreadCall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/objects/ThreadCall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/objects/UserSession$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/objects/UserSession$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/objects/UserSession$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/objects/UserSession$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/objects/UserSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/objects/UserSession.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/ContactServiceIml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/ContactServiceIml.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/JwtUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/JwtUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/OtpService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/OtpService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/UserKeyServiceIml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/UserKeyServiceIml.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/service/UserServiceIml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/service/UserServiceIml.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/giaynhap/sticker/StikerLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/giaynhap/sticker/StikerLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_dir/stiker.ini" beforeDir="false" afterPath="$PROJECT_DIR$/user_dir/stiker.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,12 +101,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1Tj1ZmD1vV3yekCoDFd30qZFAX8" />
   <component name="ProjectViewState">
@@ -77,6 +115,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -94,12 +133,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager" selected="Spring Boot.RealTimeApp">
+  <component name="RunManager" selected="Spring Boot.RealTimeApp (1)">
     <configuration name="RealTimeChatAPI []" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -161,9 +200,19 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="RealTimeApp (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="RealTimeChatAPI" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.giaynhap.RealTimeApp" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RealTimeApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.giaynhap.RealTimeApp" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,6 +220,7 @@
     <list>
       <item itemvalue="Maven.RealTimeChatAPI []" />
       <item itemvalue="Spring Boot.RealTimeApp" />
+      <item itemvalue="Spring Boot.RealTimeApp (1)" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -226,6 +276,24 @@
       <workItem from="1599277749215" duration="2438000" />
       <workItem from="1599289411940" duration="9681000" />
       <workItem from="1599545236039" duration="3566000" />
+      <workItem from="1617415609341" duration="1444000" />
+      <workItem from="1617429424603" duration="5957000" />
+      <workItem from="1617457343065" duration="2283000" />
+      <workItem from="1617503582358" duration="5391000" />
+      <workItem from="1617509162468" duration="1782000" />
+      <workItem from="1617611170597" duration="1634000" />
+      <workItem from="1617704485852" duration="1956000" />
+      <workItem from="1617706655305" duration="951000" />
+      <workItem from="1617708330267" duration="996000" />
+      <workItem from="1617794524701" duration="617000" />
+      <workItem from="1617795211168" duration="1000" />
+      <workItem from="1618676066384" duration="6779000" />
+      <workItem from="1618683059921" duration="4000" />
+      <workItem from="1618727303260" duration="3665000" />
+      <workItem from="1618755062650" duration="6991000" />
+      <workItem from="1618796754438" duration="6728000" />
+      <workItem from="1618812490718" duration="5666000" />
+      <workItem from="1618854686457" duration="648000" />
     </task>
     <servers />
   </component>
@@ -244,67 +312,9 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="307" y="16" key="#Project_Structure" timestamp="1592540492038">
-      <screen x="0" y="0" width="1600" height="900" />
-    </state>
-    <state x="307" y="16" key="#Project_Structure/0.0.1600.900@0.0.1600.900" timestamp="1592540492038" />
-    <state x="458" y="41" width="683" height="859" key="#RealTimeApp" timestamp="1592647797999">
-      <screen x="0" y="0" width="1600" height="900" />
-    </state>
-    <state x="458" y="41" width="683" height="859" key="#RealTimeApp/0.0.1600.900@0.0.1600.900" timestamp="1592647797999" />
-    <state x="281" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592545629415">
-      <screen x="0" y="0" width="1600" height="900" />
-    </state>
-    <state x="281" y="97" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.900@0.0.1600.900" timestamp="1592545629415" />
-    <state x="605" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1592630727838">
-      <screen x="0" y="0" width="1600" height="900" />
-    </state>
-    <state x="605" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1592630727838" />
-    <state x="466" y="258" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599278205116">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="466" y="258" width="433" height="218" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1599278205116" />
-    <state width="1323" height="35" key="GridCell.Tab.0.bottom" timestamp="1599552500043">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="35" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599552500043" />
-    <state width="1557" height="316" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1592648329081" />
-    <state width="1323" height="35" key="GridCell.Tab.0.center" timestamp="1599552500043">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="35" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599552500043" />
-    <state width="1557" height="316" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1592648329081" />
-    <state width="1323" height="35" key="GridCell.Tab.0.left" timestamp="1599552500043">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="35" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599552500043" />
-    <state width="1557" height="316" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1592648329080" />
-    <state width="1323" height="35" key="GridCell.Tab.0.right" timestamp="1599552500043">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="35" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599552500043" />
-    <state width="1557" height="316" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1592648329081" />
-    <state width="1323" height="12" key="GridCell.Tab.1.bottom" timestamp="1599303382633">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="12" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599303382633" />
-    <state width="1323" height="12" key="GridCell.Tab.1.center" timestamp="1599303382632">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="12" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1599303382632" />
-    <state width="1323" height="12" key="GridCell.Tab.1.left" timestamp="1599303382632">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="12" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1599303382632" />
-    <state width="1323" height="12" key="GridCell.Tab.1.right" timestamp="1599303382632">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="12" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1599303382632" />
-    <state x="328" y="87" key="SettingsEditor" timestamp="1592541718596">
-      <screen x="0" y="0" width="1600" height="900" />
-    </state>
-    <state x="328" y="87" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1592541718596" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="integrate Phuc's swear filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrate Phuc's swear filter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -356,27 +366,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>197</line>
+          <line>195</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>207</line>
+          <line>205</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>203</line>
+          <line>201</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>205</line>
+          <line>203</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>264</line>
+          <line>262</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -439,7 +449,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ContactController.java</url>
-          <line>99</line>
+          <line>98</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -452,17 +462,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ContactController.java</url>
-          <line>97</line>
+          <line>96</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/ContactController.java</url>
-          <line>102</line>
+          <line>101</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>87</line>
+          <line>83</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -482,12 +492,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>246</line>
+          <line>244</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>254</line>
+          <line>252</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -497,12 +507,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>190</line>
+          <line>188</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/giaynhap/controller/UserController.java</url>
-          <line>172</line>
+          <line>170</line>
           <properties class="com.giaynhap.controller.UserController" method="addUser">
             <option name="EMULATED" value="true" />
           </properties>

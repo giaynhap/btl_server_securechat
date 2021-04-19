@@ -17,7 +17,7 @@ public class AppConfigure {
         try {
             properties.load(this.getClass().getClassLoader().getResourceAsStream("application.properties"));
             if (SystemUtils.IS_OS_LINUX)
-                path = "/root/server.conf";
+                path = "./server.conf";
             else
                 path = "server.conf";
             config.load(new FileInputStream(path));
