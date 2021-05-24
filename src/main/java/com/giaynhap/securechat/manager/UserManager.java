@@ -11,6 +11,7 @@ import com.giaynhap.securechat.model.UserKey;
 import com.giaynhap.securechat.model.request.AuthenRequest;
 import com.giaynhap.securechat.model.request.UserRegistRequest;
 import com.giaynhap.securechat.model.response.DTO.UserInfoDTO;
+import com.giaynhap.securechat.service.serviceInterface.DeviceService;
 import org.bson.types.ObjectId;
 import org.springframework.stereotype.Component;
 
@@ -28,7 +29,7 @@ import java.util.stream.Collectors;
 @Component
 public class UserManager  extends BaseManager {
 
-    boolean enableOTP = false;
+    boolean enableOTP = true;
 
     public UserInfoDTO quickChangeName(String uuid, String newName) throws ApiException {
         UserInfo info = userService.getUserInfo(uuid);
@@ -92,7 +93,7 @@ public class UserManager  extends BaseManager {
        // String token = otpService.genOTPCode(hashString);
         login.setPassword( hashString );
         login.setCreate_at(LocalDateTime.now());
-        login.setEnable(false);
+        login.setEnable(true);
        // login.setToken(token);
         login.setTokenTime(LocalDateTime.now());
 
@@ -146,19 +147,24 @@ public class UserManager  extends BaseManager {
         if (enableOTP) {
             Device savedDevice = deviceService.getDeviceByDeviceCode(user.getId().toHexString(),device.getDeviceCode());
             Boolean needCheckToken = false;
-            if (savedDevice == null && (
-                    (authenRequest.getToken() == null || authenRequest.getToken().isEmpty()) ||
-                            (authenRequest.getTransactionId() == null || authenRequest.getTransactionId().isEmpty())
-            )
-            ) {
-                throw new ApiOptException(ApiOptException.OptExceptionCode.SEND, genOtpTransaction(user));
-            } else if (savedDevice == null) {
-                needCheckToken = true;
-            }
+            String otp = authenRequest.getToken();
+
+                if (savedDevice == null && (
+                        (authenRequest.getToken() == null || authenRequest.getToken().isEmpty()) ||
+                                (authenRequest.getTransactionId() == null || authenRequest.getTransactionId().isEmpty())
+                )
+                ) {
+                    throw new ApiOptException(ApiOptException.OptExceptionCode.SEND, genOtpTransaction(user));
+                } else if (savedDevice == null)  {
+                    needCheckToken = true;
+                } else {
+                    needCheckToken = false;
+                }
+            
 
             if (needCheckToken) {
                 String token = "";
-                String otp = authenRequest.getToken();
+
                 long transactionId = Long.parseLong(authenRequest.getTransactionId());
                 LocalDateTime now = LocalDateTime.now();
                 LocalDateTime from = LocalDateTime.ofInstant(Instant.ofEpochMilli(transactionId), ZoneId.systemDefault());
@@ -173,9 +179,17 @@ public class UserManager  extends BaseManager {
                 } catch (Exception e) {
                     throw new ApiOptException(ApiOptException.OptExceptionCode.UNKNOWN);
                 }
+                
                 if (token.isEmpty() || !token.equals(otp)) {
                     throw new ApiOptException(ApiOptException.OptExceptionCode.INCORRECT);
                 }
+
+
+                device.setUserUuid(user.getId());
+                if (device.getUUID() == null){
+                    device.setUUID(new ObjectId());
+                }
+                deviceService.saveDevice(device);
             }
         }
 
@@ -191,7 +205,7 @@ public class UserManager  extends BaseManager {
         } catch (Exception e) {
             throw new ApiOptException(ApiOptException.OptExceptionCode.UNKNOWN );
         }
-        otpService.sendOTP(user.getUserInfo().getPhone(), token);
+      //  otpService.sendOTP(user.getUserInfo().getPhone(), token);
         return time;
     }
 

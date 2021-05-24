@@ -22,4 +22,6 @@ public interface ConversationService {
     void updateKey(String conversationId, String userId, String Key);
     Message addMessage(Message message);
     UserConversation updateUserLastSeen(String conversationId, String userId, LocalDateTime time);
+    void removeMessage(String messageId);
+    Message getMessage(String messageId);
 }

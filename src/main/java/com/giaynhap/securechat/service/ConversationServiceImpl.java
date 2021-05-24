@@ -50,6 +50,19 @@ public class ConversationServiceImpl implements ConversationService {
        return null;
     }
 
+    public void removeMessage(String messageId) {
+        messageRepository.deleteById( new ObjectId(messageId));
+    }
+
+    @Override
+    public Message getMessage(String messageId) {
+        try {
+            return messageRepository.findById(new ObjectId(messageId)).get();
+        }catch (Exception e){
+            return  null;
+        }
+    }
+
     @Override
     public Conversation getBySenderAndReceiver(String sender, String receiver) {
 

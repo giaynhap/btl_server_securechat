@@ -1,6 +1,7 @@
 package com.giaynhap.securechat.service;
 
 import com.giaynhap.securechat.utils.Handler;
+import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class SocketService {
     interface SocketMessageEvent{
         void onMessasge(MessageFilter message);
+        void onBlockMessage(MessageFilter message);
         void onTimeoutMessage(MessageFilter message);
     }
 
@@ -24,6 +26,7 @@ public class SocketService {
         public short numberRevc = 0;
         public byte[] data;
         public long id;
+        public int mesageType;
 
         public boolean isCompletePacket(){
             int chunkSize = SocketService.maxPackageSize - 13;
@@ -55,7 +58,10 @@ public class SocketService {
         public MessageFilter(String messageId, String message){
             this.id = SocketService.idGenerator();
             this.message = message;
-            this.messageId = this.message;
+            this.messageId = messageId;
+            if (messageId == null) {
+                this.messageId = new ObjectId().toHexString();
+            }
         }
 
         public String getMessage() {
@@ -179,8 +185,8 @@ public class SocketService {
     protected final Logger LOG ;
     enum PackageType  {
         ACK((byte)0),
-        FILTER((byte)1);
-
+        FILTER((byte)1),
+        BLOCK((byte)2);
         public byte value;
         PackageType(byte value){
             this.value = value;
@@ -408,9 +414,18 @@ public class SocketService {
                         continue;
                     }
                     MessageFilter m = response.readData();
-                   // LOG.info("test " + m.message +"  "+ m.messageId  );
-                    boolean validateMessage = false;
-                    MessageFilterQueue existMessage= null;
+                    if (response.mesageType == PackageType.BLOCK.value) {
+                        LOG.info("Recv block message " + m.messageId+ "  - Reason "+ m.message );
+
+                        if (SocketService.this.listener != null) {
+                            SocketService.this.listener.onBlockMessage(m);
+                        }
+
+                    } else {
+
+                        // LOG.info("test " + m.message +"  "+ m.messageId  );
+                        boolean validateMessage = false;
+                        MessageFilterQueue existMessage = null;
 
                         for (MessageFilterQueue mq : sendingQueue) {
                             //LOG.info("check timeout message " + mq.message.id + "   " + (mq.message.id == m.id ));
@@ -429,6 +444,7 @@ public class SocketService {
                         } else {
                             LOG.warn("Recv timeout message " + m.id);
                         }
+                    }
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -447,7 +463,7 @@ public class SocketService {
             lastTimeACK = 0;
             serverConnected = true;
             //LOG.info("Revc ACK Packet ("+count+")");
-        } else if (type == PackageType.FILTER.value) {
+        } else if (type == PackageType.FILTER.value || type == PackageType.BLOCK.value) {
             if (packet.getLength() < 20){
                 return null;
             }
@@ -480,6 +496,7 @@ public class SocketService {
 
 
             if (response.isCompletePacket()) {
+                response.mesageType = type;
                 packetCache.remove(packetId);
                 return response;
             }

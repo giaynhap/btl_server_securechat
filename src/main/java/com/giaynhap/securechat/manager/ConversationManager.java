@@ -99,4 +99,15 @@ public class ConversationManager extends BaseManager {
        // conversationService.updateKey(conversationId,userId,key);
         return  false;
     }
+
+    public MessageDTO blockMessage(String messageId) {
+        Message m = conversationService.getMessage(messageId);
+        if (m != null) {
+            conversationService.removeMessage(messageId);
+            return MessageDTO.fromEntity(modelMapper, m);
+        } else {
+            return null;
+        }
+
+    }
 }

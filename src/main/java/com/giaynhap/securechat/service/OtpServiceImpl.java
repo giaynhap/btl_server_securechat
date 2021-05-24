@@ -67,7 +67,7 @@ public class OtpServiceImpl implements OtpService {
 
         byte[] hash = hmacSha1(data, key);
 
-        return truncateHash(hash);
+        return "123456";//truncateHash(hash);
     }
 
     private String truncateHash(byte[] hash) {

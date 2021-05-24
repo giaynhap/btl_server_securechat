@@ -1,5 +1,6 @@
 package com.giaynhap.securechat.model.request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.giaynhap.securechat.model.Device;
 
 import java.io.Serializable;
@@ -10,6 +11,7 @@ public class AuthenRequest implements Serializable {
     private String password;
     private String token;
     private Device device;
+    @JsonProperty("transaction_id")
     private String transactionId;
 
     public AuthenRequest()

@@ -19,7 +19,8 @@ public class AppConstant {
     public enum MessageCommand{
         MESSAGE(0),
         READ(1),
-        TYPING(2);
+        TYPING(2),
+        BLOCK(3);
 
         private final int value;
         private MessageCommand(int value) {

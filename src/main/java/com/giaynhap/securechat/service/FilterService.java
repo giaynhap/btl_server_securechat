@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -48,7 +49,23 @@ public class FilterService  implements  SocketService.SocketMessageEvent {
 
         SocketMessageCommandDTO m = messages.get(message.id);
         m.getData().setPayload(message.message);
+        m.getData().setUuid(message.getMessageId());
         cWebsocketService.broadcastMessage(m);
+    }
+
+    @Override
+    public void onBlockMessage(SocketService.MessageFilter message) {
+        // truong hop tin trong hang cho
+        for(Map.Entry<Long,SocketMessageCommandDTO> entry : messages.entrySet()) {
+           if (entry.getValue().getData().getUuid().equals(message.getMessageId())) {
+               messages.remove(entry.getKey());
+               return;
+            }
+        }
+
+        // truong hop tin da gui di
+        cWebsocketService.blockMessage(message.getMessageId());
+
     }
 
     @Override
@@ -58,6 +75,7 @@ public class FilterService  implements  SocketService.SocketMessageEvent {
             return;
         }
         SocketMessageCommandDTO m = messages.get(message.id);
+        m.getData().setUuid(message.getMessageId());
         cWebsocketService.broadcastMessage(m);
     }
 }

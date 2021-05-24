@@ -7,4 +7,5 @@ import org.springframework.stereotype.Service;
 public interface DeviceService {
     Device getDeviceByDeviceCode(String code);
     Device getDeviceByDeviceCode(String user,String code);
+    Device saveDevice(Device device);
 }

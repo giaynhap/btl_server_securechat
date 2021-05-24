@@ -23,18 +23,23 @@ public class DeviceServiceImpl implements DeviceService {
 
     @Override
     public Device getDeviceByDeviceCode(String code) {
-
         return deviceRepository.getByDeviceCode(code);
     }
 
     @Override
     public Device getDeviceByDeviceCode(String user, String code) {
-        Query q = Query.query(Criteria.where("user_uuid").is(new ObjectId(user)));
+        Query q = Query.query( Criteria.where("userUuid").is(new ObjectId(user)).and("deviceCode").is(code) );
         try {
-            return mongoTemplate.find(q,Device.class).get(0);
+            return mongoTemplate.findOne(q,Device.class);
         }catch (Exception e) {
             return null;
         }
 
+    }
+
+    @Override
+    public Device saveDevice(Device device) {
+
+        return mongoTemplate.save(device);
     }
 }

@@ -1,7 +1,9 @@
 package com.giaynhap.securechat.service;
 
+import com.giaynhap.securechat.config.AppConstant;
 import com.giaynhap.securechat.manager.ConversationManager;
 import com.giaynhap.securechat.model.response.DTO.ConversationDTO;
+import com.giaynhap.securechat.model.response.DTO.MessageDTO;
 import com.giaynhap.securechat.model.response.DTO.SocketMessageCommandDTO;
 import com.giaynhap.securechat.model.response.DTO.UserInfoDTO;
 import org.bson.types.ObjectId;
@@ -32,7 +34,9 @@ public class CWebsocketService {
             return;
 
         message.getData().setSender(sender);
-        message.getData().setUuid(new ObjectId().toHexString());
+        if (message.getData().getUuid() == null) {
+            message.getData().setUuid(new ObjectId().toHexString());
+        }
 
         users.forEach(m->{
 
@@ -62,4 +66,29 @@ public class CWebsocketService {
                 messagingTemplate.convertAndSend("/topic/"+m.getId(),message);
         });
     }
+
+    public  void blockMessage( String messageId){
+        MessageDTO messageDTO = conversationManager.blockMessage(messageId);
+        if (messageDTO != null) {
+            SocketMessageCommandDTO messageCommandDTO = new SocketMessageCommandDTO();
+            messageCommandDTO.setCommand(AppConstant.MessageCommand.BLOCK);
+            messageDTO.setUuid(messageId);
+            messageDTO.setEncrypt(false);
+            messageCommandDTO.setData(messageDTO);
+
+            ConversationDTO conversation  =  conversationManager.getConversation(messageDTO.getThreadUuid());
+            if (conversation == null || conversation.getUsers() == null){
+                return;
+            }
+
+            List<UserInfoDTO> users = conversation.getUsers();
+            if (users == null)
+                return;
+            users.forEach(m->{
+                System.out.println(" send block to " + m.getId());
+                messagingTemplate.convertAndSend("/topic/"+m.getId(),messageCommandDTO);
+            });
+        }
+    }
+
 }

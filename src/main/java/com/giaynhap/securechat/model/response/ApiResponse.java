@@ -9,7 +9,7 @@ public class ApiResponse<T> implements Serializable {
     private int code;
     private String message;
     private T data;
-    @JsonProperty("transction_id")
+    @JsonProperty("transaction_id")
     private String transctionId;
 
     public ApiResponse(int code, String message, T data) {
